@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.main {
+  width: min(300px, 90%);
+  padding: 1.25rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  margin: auto;
+  box-shadow: 0 0.5rem 1.5rem hsla(220, 55%, 5%, 0.25);
+}
+.main .image {
+  position: relative;
+  display: grid;
+  place-content: center;
+  height: 260px;
+  background-image: url(images/image-equilibrium.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  isolation: isolate;
+  cursor: pointer;
+}
+.main .image img {
+  opacity: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.main .image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  z-index: -1;
+}
+.main .image:hover img {
+  opacity: 1;
+}
+.main .image:hover::after {
+  opacity: 0.5;
+}
+.main .title {
+  font-size: 1.25rem;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  padding: 1rem 0;
+  display: inline-block;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.main .title:hover {
+  color: hsl(178, 100%, 50%);
+}
+.main .text {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+.main .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+.main .info .price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.925rem;
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+.main .info .time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.925rem;
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+}
+.main .bottom-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid hsl(215, 32%, 27%);
+}
+.main .bottom-section img {
+  width: 30px;
+  height: 30px;
+  outline: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.main .bottom-section .name {
+  font-size: 0.925rem;
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+}
+.main .bottom-section .name span {
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.main .bottom-section .name span:hover {
+  color: hsl(178, 100%, 50%);
+}/*# sourceMappingURL=style.css.map */

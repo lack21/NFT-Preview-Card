@@ -1,0 +1,185 @@
+// lear
+// NFT Preview Card
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+// Colors
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$veryDarkBlue: hsl(217, 54%, 11%);
+$darkBlue: hsl(216, 50%, 16%);
+$blue: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+$halfDarkBlue: hsla(220, 55%, 5%, 0.25);
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: $veryDarkBlue;
+}
+
+// Main Content
+.main {
+  width: min(300px, 90%);
+  padding: 1.25rem;
+  background-color: $darkBlue;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  margin: auto;
+  box-shadow: 0 0.5rem 1.5rem $halfDarkBlue;
+
+  .image {
+    position: relative;
+    display: grid;
+    place-content: center;
+    height: 260px;
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    isolation: isolate;
+    cursor: pointer;
+
+    img {
+      opacity: 0;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $cyan;
+      opacity: 0;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.25rem;
+    color: $white;
+    cursor: pointer;
+    padding: 1rem 0;
+    display: inline-block;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  .text {
+    color: $softBlue;
+    font-weight: 300;
+    line-height: 1.5rem;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.925rem;
+      color: $cyan;
+      font-weight: 600;
+    }
+
+    .time {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.925rem;
+      color: $softBlue;
+      font-weight: 400;
+    }
+  }
+
+  .bottom-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $blue;
+
+    img {
+      width: 30px;
+      height: 30px;
+      outline: 1px solid $white;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    .name {
+      font-size: 0.925rem;
+      color: $softBlue;
+      font-weight: 400;
+
+      span {
+        font-weight: 600;
+        color: $white;
+        cursor: pointer;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+  }
+}
